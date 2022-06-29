@@ -1,2 +1,3 @@
 # Nology-Challanges-And-Notes
-Do not push any files in, i will update it with assignments and such as we go through the course :)
+I will update it with assignments and such as we go through the course :)
+feel free to 'git pull' and save it whenever you like
