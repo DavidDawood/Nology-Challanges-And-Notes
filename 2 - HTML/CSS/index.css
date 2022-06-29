@@ -1,5 +1,21 @@
 /*CSS stands for cascading style sheets*/
 p {
+    background-color: gray;
     color: rgb(214, 184, 14);
     text-decoration: dashed;
+    border: 5px black dotted;
+}
+h2 {
+    background-color: green;
+    text-decoration: line-through;
+    font-family: "Roboto";
+    font-style: italic;
+}
+div {
+    border: 20px rgb(93, 109, 252) groove;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+h1 {
+    border: 5px solid green;
 }

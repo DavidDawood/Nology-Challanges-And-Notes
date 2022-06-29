@@ -1,0 +1,14 @@
+#favBand {
+    color: green;
+}
+h1 {
+    text-align: center;
+    color: orange;
+}
+
+#bandListSpace {
+    border: 2px black solid;
+}
+#bandListing {
+    list-style: none;
+}
