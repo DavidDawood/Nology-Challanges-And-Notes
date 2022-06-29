@@ -7,22 +7,18 @@
         <title>validationAndSubmission</title>
     </head>
     <body>
-        <!-- First Name -->
-        <!-- Age -->
-        <!-- Email Address -->
-        <!-- Password -->
-        <!-- Phone Number -->
-        <!-- Favorite Colour -->
-        <!-- Message -->
-        <!-- Submit -->
+        <!-- the action is what happens with the data, when it is submitted which will link to a URI, highlight over it for more details, once it is linked to a URI, a custom method will be used, for formSpree, a poor mans backend, the method POST will be used to send that data to formpsree, -->
+        <form action="https://formspree.io/f/xqknongj" method="POST">
 
-        <form>
             <label for="firstName">First Name: </label>
             <input type="text" placeholder="Enter your first name" name="firstName" required/>
+
             <label for="email">Email: </label>
             <input type="email" placeholder="Enter your email" name="email" required/>
+
             <br/>
             <br/>
+
             <label for="age">Age: </label>
             <input type="number" placeholder="Age" name="age" required min="18" max="100"/>
 
@@ -35,6 +31,24 @@
             <br/>
             <br/>
 
+            <label for="colour"> Favourite Colour</label>
+            <select required name="colour" id="colour">
+                <!-- since select returns a value of an empty string, required is going to need to also check our values, which select happens to be "". which it will also hide once selected -->
+                <option selected hidden value="">Select...</option>
+                <option value="Red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+            </select>
+            <br/>
+            
+            <label for="message">Message: </label>
+            <br/>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="message"></textarea>
+
+            <br/>
             <input type="submit"></input>
         </form>
     </body>
