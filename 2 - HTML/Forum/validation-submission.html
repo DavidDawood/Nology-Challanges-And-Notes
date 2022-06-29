@@ -8,10 +8,11 @@
     </head>
     <body>
         <!-- the action is what happens with the data, when it is submitted which will link to a URI, highlight over it for more details, once it is linked to a URI, a custom method will be used, for formSpree, a poor mans backend, the method POST will be used to send that data to formpsree, -->
-        <form action="https://formspree.io/f/xqknongj" method="POST">
+        <!-- _blank target is to say to open it in a new tab -->
+        <form target="_blank" action="https://formspree.io/f/xbjwewpa" method="POST">
 
-            <label for="firstName">First Name: </label>
-            <input type="text" placeholder="Enter your first name" name="firstName" required/>
+            <label for="fullName">Full Name: </label>
+            <input type="text" placeholder="Enter your full name" name="fullName" required/>
 
             <label for="email">Email: </label>
             <input type="email" placeholder="Enter your email" name="email" required/>
@@ -20,28 +21,32 @@
             <br/>
 
             <label for="age">Age: </label>
-            <input type="number" placeholder="Age" name="age" required min="18" max="100"/>
+            <input type="number" placeholder="Age" name="age" required min="12" max="100"/>
 
             <label for="password">Password: </label>
             <input type="text" placeholder="password" name="password" required minlength="3" maxlength="100"/>
 
             <label for="phoneNumber">Phone Number: </label>
-            <input type="tel" placeholder="phoneNumber" name="phoneNumber" pattern="[0-9]{2}-[0-9]{8}"/>
+            <input  type="tel" placeholder="00 00000000" name="phoneNumber" pattern="[0-9]{2} [0-9]{8}"/>
 
             <br/>
             <br/>
 
-            <label for="colour"> Favourite Colour</label>
-            <select required name="colour" id="colour">
+            <label for="state"> State: </label>
+            <select required name="state" id="state">
                 <!-- since select returns a value of an empty string, required is going to need to also check our values, which select happens to be "". which it will also hide once selected -->
-                <option selected hidden value="">Select...</option>
-                <option value="Red">Red</option>
-                <option value="blue">Blue</option>
-                <option value="Green">Green</option>
-                <option value="Yellow">Yellow</option>
-                <option value="Black">Black</option>
-                <option value="White">White</option>
+                
+                <option selected hidden value="">State...</option>
+                <option value="QLD is so much better than everyone else :)">QLD</option>
+                <option value="NSW">NSW</option>
+                <option value="ACT">ACT</option>
+                <option value="NT">NT</option>
+                <option value="WA">WA</option>
+                <option value="SA">SA</option>
+                <option value="VIC">VIC</option>
+                <option value="TAS">TAS</option>
             </select>
+
             <br/>
 
             <label for="message">Message: </label>
