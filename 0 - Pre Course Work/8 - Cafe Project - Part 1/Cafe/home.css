@@ -1,0 +1,26 @@
+main > .gallery > img 
+{
+  height: 100px;
+  width: 100px;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+main > .gallery 
+{
+  display: grid;
+  /*FR is the width of the content and the number associated is that, also the grid is based on how many 'FR's' there are*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+  border: 5px solid white;
+
+  /*the 4 values first represent the shadow direction while the color is the intensity and color of it*/
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+}
+main > .gallery > img:hover 
+{
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
+}

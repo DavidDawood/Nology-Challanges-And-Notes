@@ -1,0 +1,44 @@
+main {
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 0px 4px 8px 0px rgb(0, 0, 0, 0.2);
+    border: solid rgb(212, 212, 212) 2px;
+
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+main > .contactForm {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+}
+
+footer {
+    justify-content: center;
+    margin-top: 50px;
+
+    box-shadow: 0px 4px 8px 0px rgb(0, 0, 0, 0.2);
+    border: solid rgb(212, 212, 212) 2px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer > .messageManager {
+    text-align: center;
+    margin-bottom: 40px;
+}
+footer > .formWrapper > dl > dd {
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+}
+footer > .formWrapper > dl > dt {
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+}

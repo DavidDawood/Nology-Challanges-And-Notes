@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="index.js"></script>
+        <title>Forums</title>
+    </head>
+    <body>
+        <!-- forums are meant to be able to get input from users to be used later on, e.g. payment details, email registration etc -->
+        <!-- labels highlight an input when you click it, useful for when you get errors and you want it to jump to an input-->
+        <form onsubmit="return SubmitForum(event)">
+            <label for="fullName">Full Name: </label>
+            <input type="text" id="fullName" placeholder="Full Name..." />
+
+            <label for="age">Age: </label>
+            <input id="age" type="number" placeholder="Age..." />
+            <br />
+            <label for="message">Message: </label>
+            <br />
+            <textarea
+                id="message"
+                cols="45"
+                rows="5"
+                placeholder="Description..."
+            >
+            </textarea>
+            <br />
+            <label for="Sex">Sex: </label>
+            <select name="Sex" id="Sex">
+                <!-- selected means to automatically select this first, and hidden will make it not a viable option to select -->
+                <option selected hidden value="Select">
+                    Please Select Sex...
+                </option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <br />
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+Github SSH keys are basically machine credentials for your git profile for authorisation, using Github desktop application will automatically sort out all of this stuff for you

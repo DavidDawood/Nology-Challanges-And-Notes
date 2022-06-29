@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html html>
+
+<head>
+  <title>David's Cafe</title>
+  <link rel="styleSheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="home.html"> Home</a></li>
+      <li><a href="contact.html"> Contact Us</a></li>
+      <li><a href="book.html"> Book</a></li>
+      <li><a href="bookings.html"> Bookings </a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contact Us - David's Cafe</h1>
+    <p>Best coffee in Goldcoast</p>
+  </header>
+  <main>
+
+    <!--on submit message allows the submit input to trigger that submitMessage event-->
+    <form class="contactForm" onsubmit="return submitMessage(event);">
+      <label for="Full Name">Full Name</label>
+      <input type="text" name="Full Name" id="fullName" required>
+
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" required>
+
+      <label for="selectReason">Reason</label>
+      <select name="feedbackType" id="feedbackType">
+        <option value="Review">Review</option>
+        <option value="Complaint">Complaint</option>
+        <option value="Event">Booking Or Event</option>
+      </select>
+      <label for="comment">Comment</label>
+      <textarea name="comment" id="comment" cols="30" rows="3" required>Leave your comment here</textarea>
+
+      <button>clear</button>
+      <input type="submit">
+      <!-- First name, email, reason , comment-->
+      <!-- clear -->
+      <!-- submit -->
+
+      <!-- label must match the name of the thing it wants to label-->
+    </form>
+  </main>
+  <footer>
+    <!-- will list all messages -->
+    <div class="form-title-section">
+      <h3>Contact Messages</h3>
+      <button onclick="deleteMessages()">Clear Messages</button>
+    </div>
+    <div class="formWrapper">
+      <dl id="currentMessages"></dl>
+    </div>
+
+  </footer>
+
+
+  <!-- the preventDefault allows the form to not do its default methods, which is clear all the inputs etc / reset -->
+  <script>
+function deleteMessages()
+{
+  if(window.sessionStorage.getItem("messages"))
+  {
+    window.sessionStorage.removeItem("messages");
+    renderMessages();
+  }
+}
+
+    function renderMessages() {
+      let currentMessages = [];
+      if (window.sessionStorage.getItem("messages")) {
+        currentMessages = JSON.parse(window.sessionStorage.getItem("messages"));
+      }
+      let listItems = [];
+      for (let i = 0; i < currentMessages.length; i++) {
+        let listItem = "";
+        const currentMessage = currentMessages[i];
+
+        // the '<dt></dt>' with the values in between basically allow custom listings on it, so using `` basically allows tag messages inside and custom write code, with code
+        listItem += `<dt>${currentMessage.fullName} - ${currentMessage.email}</dt>`;
+        listItem += `<dd>${currentMessage.feedback} : ${currentMessage.comment}</dd>`;
+        listItem += `<br>`;
+        listItems.push(listItem);
+      }
+      let descriptionList = document.getElementById("currentMessages");
+      descriptionList.innerHTML = listItems.join("");
+
+
+    }
+
+    function submitMessage(event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const fullName = document.getElementById("fullName").value;
+      const feedback = document.getElementById("feedbackType").value;
+      const comment = document.getElementById("comment").value;
+
+      const messageObject = {
+        fullName, email, feedback, comment
+      }
+
+      // long story short, after all this, update the session storages new history of messages
+      let currentMessages = [];
+      // basically if there are previous messages in the session storage, have it bring those up, if not make a new one, or just update it
+      if (window.sessionStorage.getItem("messages")) {
+        currentMessages = JSON.parse(window.sessionStorage.getItem("messages"));
+      }
+      // adding the new message to end of array using the push keyword
+      currentMessages.push(messageObject);
+      // once i push something in it, im making a new list of messages in the sessionStorage and setting it
+      window.sessionStorage.setItem("messages", JSON.stringify(currentMessages));
+
+      renderMessages();
+    }
+
+    // script block will run on page load
+    renderMessages();
+  </script>
+
+
+</body>
+
+</html>

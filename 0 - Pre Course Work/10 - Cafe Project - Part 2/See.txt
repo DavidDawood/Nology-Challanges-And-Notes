@@ -1,0 +1,5 @@
+Is inside of the Cafe project in part 1
+
+- Storing Messages
+- Recieving & Rendering Messages
+- Deleting Messages

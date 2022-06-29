@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html html>
+<head>
+  <title>combination challange</title>
+  <h1> Header 1 </h1>
+  <div class="firstP">
+  <p> First paragraph to red</p>
+</div>
+</head>
+<br>
+<body>
+  <h1> Header 2</h1>
+  <div class="secondP">
+    <p> Second paragraph to blue </p>
+    <p> Second child to green </p>
+    <span>
+      <p> not directly inside of secondP</p>
+    </span>
+  </div>
+  <p> First sibiling on level with secondP</p>
+  <p> second sibiling on level with secondP, colored using all P ~ command</p>
+</body>
+
+<style>
+  .firstP
+  {
+    color: red;
+  }
+  .secondP
+  {
+    color: blue;
+  }
+  .secondP ~ p
+  {
+    color: lime;
+  }
+  .secondP > p
+  {
+    color: brown;
+  }
+  .secondP + p
+  {
+    color: green;
+  }
+</style>
+</html>

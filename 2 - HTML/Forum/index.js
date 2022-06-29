@@ -1,0 +1,3 @@
+function SubmitForum() {
+    alert("submitted");
+}

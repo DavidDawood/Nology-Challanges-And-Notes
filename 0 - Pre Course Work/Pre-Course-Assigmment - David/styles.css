@@ -1,0 +1,36 @@
+nav
+{
+  border: 5px solid black;
+  margin: 0px;
+  padding: 5px;
+}
+nav > ul
+{
+  list-style: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+nav > ul > li
+{
+  align-items: center;
+}
+nav > ul > li > a
+{
+  color: #222;
+  text-decoration: none;
+}
+nav > ul > li > a:hover
+{
+  color: black;
+  text-decoration: underline overline;
+}
+
+header
+{
+  text-align: center;
+}
+header > h1
+{
+  margin-bottom: 10px;
+}

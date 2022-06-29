@@ -1,0 +1,19 @@
+1 - SessionStorage - Will allow the user to store a key, and then a value, which
+    does not get removed upon the page being refreshed using the following
+	- sessionStorage.GetItem('Key Here'); // ALWAYS RETURNS A STRING
+	- sessionStorage.SetItem('Key Name', Value)
+
+2 - Types - String: "Text"
+ 	  - Number: 235
+	  - Arrays: [1,5,2]
+
+3 - Complex Data - since it always returns a string, use parseInt(string); to get it to be a number
+		 - For Arrays use and objects, JSON.stringify & JSON.parse
+			- creates a string representation of it
+		 - So use SessionStorage.SetItem('objectName',JSON.Stringify(Object)); To Set it
+		 - And use JSON.Parse(SessionStorage.GetItem('objectName')); to get it and wit will
+		   return as an object
+
+4 - DOM Interactions - Interaction with HTML between javascript
+		 - You can adjust all sorts of things in the HTML console using documen.(command)
+			such as get ElementByID or class, or even a tag such as the <H1> tag

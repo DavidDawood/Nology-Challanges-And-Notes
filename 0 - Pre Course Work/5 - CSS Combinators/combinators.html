@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <!-- the paragraphs below the div are related to the container, as they are on the same 'level'-->
+  <div class = "container">
+    <p> this is a direct child</p>
+    <p> this is another direct child</p>
+    <span>
+      <p> this is not a direct child</p>
+    </span>
+  </div>
+  <p> this is the first sibling</p>
+  <p> this is the second sibling</p>
+  <p> this is the third sibling</p>
+
+  <style>
+    /* if i want to color all of it blue, i just use p, but all p's inside the container div must be specified after doing .container, NOTE: ORDER OF THE STYLES ARE IMPORTANT */
+    .container
+    {
+      border: 2px solid black;
+    }
+    .container p
+    {
+      color: red;
+    }
+    .container > p
+    {
+      /* the > symbol means it will affect direct children of the container, ones that are directly inside of it only*/
+      color: green;
+    }
+
+    /*will style all sibilings, thats what ~ is for, NOTE THE SINCE THE FIRST SIBLING IS LATER, IT WILL ONLY DO 2 OUT OF 3*/
+    .container ~ p
+    {
+      color: brown;
+    }
+        /*will style the first sibling*/
+        .container + p
+    {
+      color: orange;
+    }
+  </style>
+</body>
+</html>

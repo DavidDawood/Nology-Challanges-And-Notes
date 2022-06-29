@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="styleSheet" href="styles.css" />
+        <link rel="stylesheet" href="contact.css" />
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="home.html"> Home </a></li>
+                <li><a href="gallery.html"> Gallery </a></li>
+                <li><a href="ContactUs.html"> Contact Us </a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>Contact Us</h1>
+            <p>Information so you know how to get in touch with us</p>
+        </header>
+        <main>
+            <form class="contactForm" onsubmit="return SubmitMessage(event)">
+                <label for="nameTextField">Full Name</label>
+                <input
+                    type="text"
+                    name="nameTextField"
+                    id="nameTextField"
+                    required
+                />
+
+                <label for="emailField">Email</label>
+                <input
+                    type="emailField"
+                    name="emailField"
+                    id="emailField"
+                    required
+                />
+
+                <label for="reasonlabel">Reason</label>
+                <select name="reasonLabel" id="reasonLabel">
+                    <option value="book">Booking Or Event</option>
+                    <option value="review">Review</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="commentField">Comment</label>
+                <textarea
+                    name="commentField"
+                    id="commentField"
+                    cols="20"
+                    rows="3"
+                    required
+                ></textarea>
+
+                <button>clear</button>
+                <input type="submit" />
+            </form>
+        </main>
+        <footer>
+            <div class="messageManager">
+                <h3>Contact Messages</h3>
+                <button onclick="ClearMessages()">Clear Messages</button>
+            </div>
+
+            <div class="formWrapper">
+                <dl id="currentMessages"></dl>
+            </div>
+        </footer>
+
+        <script>
+            function ClearMessages() {
+                if (window.sessionStorage.getItem("messages")) {
+                    window.sessionStorage.removeItem("messages");
+                    RenderMessages();
+                }
+            }
+
+            function RenderMessages() {
+                let currentMessages = [];
+
+                if (window.sessionStorage.getItem("messages")) {
+                    currentMessages = JSON.parse(
+                        window.sessionStorage.getItem("messages"),
+                    );
+                }
+
+                let listItems = [];
+                for (let i = 0; i < currentMessages.length; i++) {
+                    let listItem = "";
+                    const currentMessage = currentMessages[i];
+
+                    listItem += `<dt>${currentMessage.fullName} - ${currentMessage.emailAddress}</dt>`;
+                    listItem += `<dd>${currentMessage.reason} : ${currentMessage.comment}</dd>`;
+                    listItem += `<br>`;
+                    listItems.push(listItem);
+                }
+                let messageListing = document.getElementById("currentMessages");
+                messageListing.innerHTML = listItems.join("");
+            }
+            function SubmitMessage(Event) {
+                Event.preventDefault();
+                // check if any previous session messages exist
+                // if there is, fetch it, if not, make a new one
+                // parse all data, then add it, stringify it and send it back into the session storage
+
+                const fullName = document.getElementById("nameTextField").value;
+                const emailAddress =
+                    document.getElementById("emailField").value;
+                const reason = document.getElementById("reasonLabel").value;
+                const comment = document.getElementById("commentField").value;
+
+                let message = { fullName, emailAddress, reason, comment };
+                let previousMessages = [];
+
+                if (window.sessionStorage.getItem("messages")) {
+                    previousMessages = JSON.parse(
+                        window.sessionStorage.getItem("messages"),
+                    );
+                }
+
+                previousMessages.push(message);
+                window.sessionStorage.setItem(
+                    "messages",
+                    JSON.stringify(previousMessages),
+                );
+                RenderMessages();
+            }
+            RenderMessages();
+        </script>
+    </body>
+</html>
