@@ -1,0 +1,12 @@
+.test {
+    border: coral 2px solid;
+    padding: 30px;
+    background-color: pink;
+    margin: 15px;
+}
+div {
+    border: coral 2px solid;
+    padding: 20px;
+    margin: 0px;
+    background-color: limegreen;
+}
