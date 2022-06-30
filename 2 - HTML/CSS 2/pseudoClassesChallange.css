@@ -1,0 +1,13 @@
+a:link {
+    color: green;
+}
+a:visited {
+    color: gold;
+}
+a:active {
+    color: black;
+}
+a:hover {
+    background-color: red;
+    color: pink;
+}

@@ -53,3 +53,21 @@ some pseudo are interactive, some are position based which might be like sibling
 #firstChild > h1 {
     color: aqua;
 }
+
+/*
+remember, chain of command, as they are all specific
+first is black because its optional, not required, but since its last, it is the last to be applied, even though its also elligble for blue
+second is blue as it is enabled but it is required, but is second on the list
+red is last because its required and is not enabled
+and submit is black because its optional, and is on the bottom
+*/
+
+form > input:required {
+    border: 2px red solid;
+}
+form > input:enabled {
+    border: 2px blue dotted;
+}
+form > input:optional {
+    border: 2px solid black;
+}
