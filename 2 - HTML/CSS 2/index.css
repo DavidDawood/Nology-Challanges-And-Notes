@@ -1,0 +1,24 @@
+#testPara {
+    color: red;
+}
+.test-para {
+    color: blue;
+}
+
+/*you can mix classes together by leaving a gap in between them like this 'class ="border test-para"' which will combine the two*/
+.border {
+    border: 2px black solid;
+}
+
+/*checks, if i have both this id and this class together in one element, it will do this css*/
+#testPara.test-para {
+    color: green;
+}
+
+/*the gap between dots means it will search the element with section, then look for a child with secondary-section and apply this css*/
+.first-section .second-section {
+    color: cyan;
+    border: 2px solid cyan;
+}
+
+/*you can see which order of operations goes in by seeing this https://specifishity.com/specifishity.pdf*/

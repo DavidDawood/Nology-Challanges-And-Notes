@@ -1,0 +1,26 @@
+/*look inside of all divs with the class of container, and find all p tags in it, if there was a gap, i would be looking into the div, trying to find a class of container, then find p, but in this case im finding a container class inside the div directly as the . means to find a combination of, so find a combination of div, and the class of container*/
+div.container p {
+    color: red;
+}
+
+/*this will select every single child of the outer-container, and search for all p's in it even if its inside another nested*/
+div.outer-container p {
+    font-weight: bold;
+    color: red;
+}
+
+/*the > will only select direct children of the outer-container*/
+div.outer-container > p {
+    color: blue;
+}
+
+/* + will select first sibling on the same level*/
+div.inner-container + p {
+    color: green;
+}
+
+/*select all siblings using ~, or normally known as general sibling combinator, only sibling downward */
+
+div.inner-container ~ p {
+    border: solid black 2px;
+}

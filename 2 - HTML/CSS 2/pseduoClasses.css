@@ -1,0 +1,55 @@
+div > p:hover {
+    background-color: gray;
+}
+
+/*link is to have default without visted, visted is when you have clicked on it and you have cookies cached it, and hover for when you hover over the button*/
+a:link {
+    color: green;
+    text-decoration: underline;
+    cursor: copy;
+}
+a:visited {
+    color: gold;
+    text-decoration: line-through;
+}
+a:hover {
+    color: aqua;
+    text-decoration: none;
+}
+a:active {
+    color: black;
+}
+
+/*
+To use pseudo classes, use the ':' key after a class or id
+some pseudo are interactive, some are position based which might be like sibling based, or child etc
+*/
+
+/*remember since pseudo classes are more specific, they have more priority*/
+
+/*find a id of firstChild, get all children of just that tag, find all P tags, and get the first one*/
+#firstChild > p:first-of-type {
+    border: 2px black solid;
+}
+
+/*nth of type will get the 4th element of p and put a thick border on it*/
+#firstChild > p:nth-of-type(4) {
+    border: 5px solid green;
+}
+#firstChild > p:last-of-type {
+    border: 10px solid orange;
+}
+
+/*rather than last of type which starts from the top, this last of type starts from the bottom and counts up*/
+#firstChild > p:nth-last-of-type(3) {
+    border: 20px solid violet;
+}
+
+/*this style will only apply if there is only one type, if not, then it will be disabled, and due to this being more specific, if there is two types, it will be aqua, if not, it will be purple with a border*/
+#firstChild > h1:only-of-type {
+    color: purple;
+    border: purple 30px groove;
+}
+#firstChild > h1 {
+    color: aqua;
+}
