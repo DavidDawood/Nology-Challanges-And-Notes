@@ -1,0 +1,20 @@
+#area {
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+p {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+justify-content is horizontally
+align-items is vertically, majority of the time
+*/
