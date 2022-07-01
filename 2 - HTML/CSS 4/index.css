@@ -1,0 +1,42 @@
+#image {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: skyblue;
+    border: black solid 2px;
+    width: 20%;
+    height: 20%;
+
+    margin: 30px;
+}
+#imageHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background-color: lightblue;
+
+    width: 50%;
+    height: 50vh;
+    border: navy 2px solid;
+}
+
+/*flex direction default, will be row, i am able to turn an input which is a inline element, has become a block element with flex direction*/
+/*when you change direction to column, justify and align items switch, rather than justify being horizontal it becomes vertical*/
+/*you can flex direction either column-reverse or just column depending if you want to move it at the bottom of the body or the top*/
+inline {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    width: 50%;
+    height: 20vh;
+    border: navy 2px solid;
+    background-color: lightblue;
+}
+inline > input {
+    margin: 3px;
+}
