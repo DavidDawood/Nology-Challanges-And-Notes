@@ -1,0 +1,25 @@
+.container {
+    width: 500px;
+    height: 200px;
+}
+.container__border {
+    margin: 10px;
+    border: 2px;
+}
+.container__border--green {
+    border-color: green;
+    border-style: dashed;
+}
+.container__border--orange {
+    border-color: coral;
+    border-style: solid;
+}
+
+.container__description {
+    color: blue;
+    text-decoration: line-through;
+}
+.container__description--aligned {
+    display: flex;
+    justify-content: right;
+}
