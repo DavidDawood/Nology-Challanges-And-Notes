@@ -1,0 +1,7 @@
+-   order 1
+-   To change the order similar to flex-direction: reverse or something
+
+-   flex-flow: column wrap
+-   a mixture of flex-direction & flex-wrap,
+
+This can be confusing, but align-content determines the spacing between lines, while align-items determines how the items as a whole are aligned within the container. When there is only one line, align-content has no effect.
