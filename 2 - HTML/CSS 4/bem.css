@@ -1,0 +1,18 @@
+.card {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card__title {
+    color: blue;
+}
+.card__title--italic {
+    font-style: italic;
+}
+.card__button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+.card__button--secondary {
+    background-color: cornflowerblue;
+}
