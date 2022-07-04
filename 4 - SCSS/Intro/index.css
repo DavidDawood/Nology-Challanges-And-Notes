@@ -1,0 +1,57 @@
+h1 {
+  color: red;
+}
+
+.container {
+  border: 2px solid black;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+.container--border-pink {
+  border-color: hotpink;
+}
+.container__title {
+  font-family: Arial, Helvetica, sans-serif;
+  color: green;
+}
+.container__title--underlined {
+  text-decoration: underline;
+}
+.container__btn {
+  background-color: green;
+  color: white;
+  border: 2px solid green;
+  padding: 5px 10px;
+}
+.container__btn--secondary {
+  background-color: white;
+  color: green;
+}
+
+.second-container {
+  border: 2px solid black;
+  padding: 30px;
+}
+.second-container__header--blue {
+  color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.second-container__underlined--red {
+  color: red;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sub-container__text--brown {
+  color: brown;
+}
+.sub-container__text--coral {
+  color: coral;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+/*# sourceMappingURL=index.css.map */
