@@ -1,0 +1,7 @@
+@use "../partials/palette";
+.btn {
+    background-color: palette.$primary;
+    &:hover {
+        background-color: blue;
+    }
+}

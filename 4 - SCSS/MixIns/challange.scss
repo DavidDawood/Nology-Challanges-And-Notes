@@ -1,0 +1,21 @@
+@use "./MixinFolder/mixin";
+
+.container {
+    padding: 50px;
+    margin: 20px;
+    &__border {
+        &--dotted {
+            @include mixin.text($borderColor: red, $borderStyle: dotted);
+
+            @include mixin.center();
+        }
+        &--solid {
+            @include mixin.text($borderColor: blue, $borderStyle: solid);
+            @include mixin.center();
+        }
+        &--striped {
+            @include mixin.text($borderColor: blue, $borderStyle: dashed);
+            @include mixin.center();
+        }
+    }
+}

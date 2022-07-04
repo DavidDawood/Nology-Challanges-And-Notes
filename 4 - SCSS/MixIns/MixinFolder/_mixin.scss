@@ -1,0 +1,37 @@
+@mixin test {
+    background-color: silver;
+}
+
+// i can use parameters like this, by making a property with the dollar sign, i can do the following
+@mixin sizeModifier($value) {
+    width: $value;
+    height: $value;
+}
+// by doing the & thing, im saying if i have a class of this type, then im going to do the following, i can do it the other way around toom by saying a new sub class and return a certain value, but just showing this here so you know you can do this
+
+// the 100 at the end with ':' is the default value
+@mixin buttonChanger($small: 30px, $medium: 100px, $large: 100px) {
+    &--small {
+        font-size: $small;
+    }
+    &--medium {
+        font-size: $medium;
+    }
+    &--large {
+        font-size: $large;
+    }
+}
+
+// you cannot create overrides, we can simply do defaults but we cant make overrides etc
+
+@mixin text($borderColor, $borderStyle) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 3px $borderColor $borderStyle;
+    margin: 10px;
+}
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

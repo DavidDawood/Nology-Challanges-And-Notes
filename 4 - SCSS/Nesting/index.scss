@@ -1,5 +1,9 @@
+// you can use a dollar sign as a variable, and keep it across the website, so in case you want to change it, you can do it like this
+$variableColor: purple;
+$primaryFont: Arial, Helvetica, sans-serif;
+
 h1 {
-    color: red;
+    color: $variableColor;
 }
 .container {
     border: 2px solid black;
@@ -10,7 +14,7 @@ h1 {
         border-color: hotpink;
     }
     &__title {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $primaryFont;
         color: green;
         &--underlined {
             text-decoration: underline;
@@ -34,12 +38,12 @@ h1 {
 
     &__header--blue {
         color: blue;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $primaryFont;
     }
     &__underlined--red {
         color: red;
         text-decoration: underline;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $primaryFont;
     }
 }
 

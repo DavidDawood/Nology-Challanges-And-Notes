@@ -1,0 +1,28 @@
+@use "./MixinFolder/mixin.scss";
+@mixin flex {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    justify-items: center;
+}
+
+.gallery {
+    @include flex;
+    &__item {
+        @include mixin.sizeModifier(
+            300px
+        ); // i can call it via the @include then the file.method
+        margin: 30px;
+    }
+}
+.btn {
+    // you can use [name]:[value] to custom place, much like in c#
+    @include mixin.buttonChanger($small: 20px, $medium: 40px, $large: 60px);
+}
+
+.navigation {
+    @include mixin.test;
+    @include flex;
+}
+
+// you can use a mixin by doing the @include key, you can also make a mixin by doing @mixin [name]

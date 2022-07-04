@@ -1,0 +1,24 @@
+.btn {
+  background-color: black;
+}
+.btn:hover {
+  background-color: blue;
+}
+
+body {
+  padding: 50px 100px;
+  background-color: black;
+}
+
+.info-dock {
+  background-color: rgb(148, 148, 148);
+  padding: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.info-dock__border {
+  box-shadow: 0px 0px 5px 2px gold;
+  border-radius: 20px;
+}
+.info-dock:hover {
+  color: rgb(245, 245, 245);
+}

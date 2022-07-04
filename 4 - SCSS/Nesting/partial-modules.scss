@@ -1,0 +1,24 @@
+// use this command to get variables straight from anoter scss file, good for palettes
+// i can also use as to have it be a custom name
+@use "./partials/palette" as newName;
+@use "./partials/typeography";
+@use "./modules/btn.scss"; // because im importing the button as a class, i dont need to do anything with it now here, but its automatically done for us when it gets done in the CSS file
+
+body {
+    padding: 50px 100px;
+    background-color: newName.$primary;
+    // when we want to access a variable, point to the file via a '.', then the $[variable name here]
+}
+.info-dock {
+    background-color: newName.$tertiary;
+    padding: 50px;
+    font-family: typeography.$primary;
+
+    &__border {
+        box-shadow: 0px 0px 5px 2px newName.$secondary;
+        border-radius: 20px;
+    }
+    &:hover {
+        color: newName.$onHover;
+    }
+}
