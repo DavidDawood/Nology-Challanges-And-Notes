@@ -5,8 +5,8 @@
     margin: 20px;
     &__border {
         &--dotted {
+            background-color: gray;
             @include mixin.text($borderColor: red, $borderStyle: dotted);
-
             @include mixin.center();
         }
         &--solid {
