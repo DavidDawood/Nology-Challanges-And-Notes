@@ -1,0 +1,20 @@
+$german: 600px;
+$Belgian: 900px;
+$Irish: 900px;
+
+@mixin small {
+    @media only screen and(max-width: $german) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media only screen and(min-width: ($german+1)) and (max-width: $Belgian) {
+        @content;
+    }
+}
+@mixin large {
+    @media only screen and(min-width:($Belgian+1)) {
+        @content;
+    }
+}

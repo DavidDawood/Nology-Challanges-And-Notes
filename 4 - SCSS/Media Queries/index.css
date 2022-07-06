@@ -1,0 +1,66 @@
+.btn {
+  background-color: black;
+}
+@media only screen and (max-width: 576px) {
+  .btn {
+    font-size: 12px;
+    background-color: aqua;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .btn {
+    background-color: green;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .btn {
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .btn {
+    background-color: red;
+  }
+}
+
+body {
+  height: 100vh;
+  margin: 0px;
+  background-color: gray;
+}
+
+.gallery {
+  display: grid;
+}
+@media only screen and (max-width: 576px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery img {
+    grid-template-columns: 90vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery img {
+    grid-template-columns: 45vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .gallery img {
+    grid-template-columns: 30vw;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .gallery img {
+    grid-template-columns: 15vw;
+  }
+}

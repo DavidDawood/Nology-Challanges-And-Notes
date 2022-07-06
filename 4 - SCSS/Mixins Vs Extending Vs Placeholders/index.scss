@@ -1,0 +1,42 @@
+@use "./modules/modules.scss";
+
+// both of the files below use
+
+// a placeholder, will only be used when its been used in the code
+// place holders use are bascically interfaces but it actually has code, basically a mobile function, but mainly is for human readability
+%buttons-style {
+    background-color: rgb(160, 51, 12);
+    color: white;
+}
+// mixins can have parameters while placeholders cannot
+
+.box {
+    @extend .box;
+    &__description {
+        @include modules.size-modifier($small: 30px, $large: 40px);
+
+        // while mixins do not group together variables (uses more space), place holders group several classes together and makes things neater and smaller
+    }
+}
+// rather than using a mixin, i have instead used inhertieance to usethe boxes details / styles
+.blog {
+    color: red;
+    @extend .box;
+    &__description {
+        @include modules.size-modifier($small: 10px, $large: 15px);
+    }
+}
+// if you see the css file, it has been placed underneath, so all files are grouped together, that are used in the @extend, and then any other properties which use the same value will then be placed underneath in the css which will override it
+
+.btn {
+    @extend %buttons-style;
+}
+.chip {
+    @extend %buttons-style;
+}
+
+// long story short, if you are expecting duplicate information, that several classes use, its better to use a place holder, if you expect it to be different, then use a mixin e.g different tags use different sizes etc
+
+// Mixin are flexible pieces of code which are blank templates / structures, which values can change, @includes mixin
+// Extending is basically code which group classes together under one variable, good for setting several classes colours to blue or something without duplicating code, @extends .class
+// Placeholders are only applied if used, place holders also indicate to humans that this is not a class to be used on its own but is merely an extension, basically like inhertiance but you can stack it, @extends %placeholder

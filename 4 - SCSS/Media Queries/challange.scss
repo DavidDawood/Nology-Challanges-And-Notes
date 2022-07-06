@@ -1,0 +1,53 @@
+@use "./partials/challangeDevices";
+// @media only screen and(min) and (max)
+//{
+// @content;
+//}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+
+    @include challangeDevices.small {
+        grid-template-rows: 1fr 1fr 1fr;
+        &__stripe-one {
+            background-color: black;
+        }
+        &__stripe-two {
+            background-color: yellow;
+        }
+        &__stripe-three {
+            background-color: red;
+        }
+    }
+    @include challangeDevices.medium {
+        grid-template-columns: 1fr 1fr 1fr;
+        &__stripe-one {
+            background-color: black;
+        }
+        &__stripe-two {
+            background-color: yellow;
+        }
+        &__stripe-three {
+            background-color: red;
+        }
+    }
+    @include challangeDevices.large {
+        grid-template-columns: 1fr 1fr 1fr;
+        &__stripe-one {
+            background-color: green;
+        }
+
+        &__stripe-two {
+            background-color: white;
+        }
+        &__stripe-three {
+            background-color: orange;
+        }
+    }
+}

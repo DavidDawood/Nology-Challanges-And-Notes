@@ -1,0 +1,27 @@
+.box, .blog {
+  background-color: rgb(189, 189, 189);
+  color: darkblue;
+  display: flex;
+}
+
+.chip, .btn {
+  background-color: rgb(160, 51, 12);
+  color: white;
+}
+
+.box__description--small {
+  font-size: 30px;
+}
+.box__description--large {
+  font-size: 40px;
+}
+
+.blog {
+  color: red;
+}
+.blog__description--small {
+  font-size: 10px;
+}
+.blog__description--large {
+  font-size: 15px;
+}

@@ -1,0 +1,19 @@
+@mixin flex {
+    display: flex;
+}
+
+.box {
+    background-color: rgb(189, 189, 189);
+    color: darkblue;
+
+    @include flex;
+}
+
+@mixin size-modifier($small, $large) {
+    &--small {
+        font-size: $small;
+    }
+    &--large {
+        font-size: $large;
+    }
+}

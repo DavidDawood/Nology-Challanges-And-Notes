@@ -1,0 +1,60 @@
+// breakpoints is past a certain width or height, changes the format of the website
+
+// bootstrap allows websites to be easily formatted to mobile using the mobile-first method, bootstrap is a framework / some code other people made
+
+@use "./partials/devices";
+
+.btn {
+    background-color: black;
+    @include devices.phone {
+        font-size: 12px;
+        background-color: aqua;
+    }
+    @include devices.tablet {
+        background-color: green;
+    }
+    @include devices.tablet-landscape {
+        background-color: yellow;
+    }
+    @include devices.laptop {
+        background-color: red;
+    }
+}
+
+// star is select all
+
+body {
+    height: 100vh;
+    margin: 0px;
+    background-color: gray;
+}
+
+.gallery {
+    display: grid;
+
+    @include devices.phone {
+        // fr means fraction, 1 will divide by page, meaning 1 column is the entire page
+        grid-template-columns: 1fr;
+        img {
+            grid-template-columns: 90vw;
+        }
+    }
+    @include devices.tablet {
+        grid-template-columns: 1fr 1fr;
+        img {
+            grid-template-columns: 45vw;
+        }
+    }
+    @include devices.tablet-landscape {
+        grid-template-columns: 1fr 1fr 1fr;
+        img {
+            grid-template-columns: 30vw;
+        }
+    }
+    @include devices.laptop {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        img {
+            grid-template-columns: 15vw;
+        }
+    }
+}
