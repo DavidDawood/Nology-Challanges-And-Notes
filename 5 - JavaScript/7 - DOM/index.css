@@ -12,6 +12,13 @@ body {
   background-color: #222222;
 }
 
+.task {
+  color: black;
+}
+.task--nightMode {
+  color: white;
+}
+
 input {
   text-align: center;
 }

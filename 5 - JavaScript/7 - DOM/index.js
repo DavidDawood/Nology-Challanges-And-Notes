@@ -63,4 +63,45 @@ styleBtn.addEventListener("click", () => {
     containers2.forEach((x) => {
         x.classList.toggle("container--nightMode");
     });
+
+    const paras = document.getElementsByClassName("task");
+    for (let index = 0; index < paras.length; index++) {
+        const element = paras[index];
+
+        element.classList.toggle("task--nightMode");
+    }
+    // i have to use the for loop because technically, elements by class names are objects, not arrays, and such stuff like foreach and map etc dont exist for it
 });
+
+const addButton = document.getElementById("addButton");
+console.log(addButton);
+
+addButton.addEventListener("click", () => {
+    const inputValue = document.getElementById("taskInput");
+    let nothingPara = document.getElementById("nothingPara");
+    console.log(inputValue.value);
+    console.log(nothingPara);
+
+    if (inputValue.value === "") {
+        return alert("Enter a task first!");
+    }
+
+    const parentDiv = document.querySelector("#tasks");
+
+    appendTextElement("p", inputValue.value, parentDiv);
+    inputValue.value = "";
+
+    if (nothingPara) {
+        parentDiv.removeChild(nothingPara);
+    }
+});
+
+const appendTextElement = (elementType, textString, parentElement) => {
+    const element = document.createElement(elementType);
+    const text = document.createTextNode(textString);
+
+    element.classList.add("task");
+    element.appendChild(text);
+
+    parentElement.appendChild(element);
+};
