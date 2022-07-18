@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <!-- the type must be module if you want to use modules -->
+        <script type="module" src="./index.js" defer></script>
+        <script type="module" src="./rectangle.js" defer></script>
+        <script type="module" src="./circle.js" defer></script>
+        <script type="module" src="./dom-utils.js" defer></script>
+    </head>
+    <body>
+        <h1>YOU HAVE TO USE LIVE SERVR FOR MODULES TO WORK</h1>
+        <section>
+            <h2>Rectangle Calculations</h2>
+            <form id="rectangleForm">
+                <label for="x">X: </label>
+                <input type="text" id="x" />
+                <label for="x">Y: </label>
+                <input type="text" id="y" />
+                <button>Calculate</button>
+            </form>
+            <div id="rectangleOutput"></div>
+        </section>
+        <section>
+            <h2>Circle Calculations</h2>
+            <form id="circleForm">
+                <label for="radius">Radius: </label>
+                <input type="text" id="radius" />
+                <button>Calculate</button>
+            </form>
+            <div id="circleOutput"></div>
+        </section>
+    </body>
+</html>
