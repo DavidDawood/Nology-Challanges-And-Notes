@@ -22,6 +22,7 @@ console.log(
 );
 
 // this is basically a try catch block
+// NOTE: Catch block will also handle any errors that happen both in the promise and the then and the finally block, be sure to make the catch block at the end of the method chain
 myRealPromise
     .then((value) => console.log(value))
     .catch((error) => console.log(error.message))
